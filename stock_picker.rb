@@ -3,9 +3,12 @@ def stock_picker(prices_in_days)
 	result = [prices_in_days[0],prices_in_days[1]]
 
 	for i in 0...prices_in_days.length
+
 		for j in i...prices_in_days.length
+
 			if prices_in_days[j] - prices_in_days[i] > profit
 				profit = prices_in_days[j] - prices_in_days[i]
+				
 				result[0] = i 
 				result[1] = j
 			end 
